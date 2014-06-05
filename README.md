@@ -70,9 +70,9 @@ Concepts: Pure Functions
 
 "Pure" functions return a result based only on what you pass in.
 
-### Gravity is a Harsh Mistress
+### Example: The Fall of Rome
 ```
-class Ball {
+class Rome {
     constructor(gravity) {
         this.x = 0
         this.y = 0
