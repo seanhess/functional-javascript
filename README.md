@@ -24,11 +24,13 @@ What is Functional Programming?
 > In computer science, functional programming is a programming paradigm, a style of building the structure and elements of computer programs, that treats computation as the evaluation of mathematical functions and avoids state and mutable data.
 — Wikipedia
 
-### Imperitive Programming
+WAT?
+
+### The opposite: Imperitive Programming
 - series of instructions to the computer to access & modify memory. 
 - Focus on HOW it works
 
-```js
+```JavaScript
 var totalAge = 0
 for (var i = 0; i < users.length; i++) {
     totalAge += users[i].age
