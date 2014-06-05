@@ -79,8 +79,7 @@ class Apple {
         this.velocity = 0
     }
 
-    // fall depends on this.gravity, and this.y, which will 
-    // be different each call. It also modifies this.y
+    // fall depends on this.gravity, and this.y, which can change. 
     // this is the right equation, right?
     fall(dt) {
         this.y += this.gravity * dt
