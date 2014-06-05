@@ -103,9 +103,9 @@ apple.y += distance
 ### What's the point of pure?
 
 - much easier to test
-- optimizations like memoization and concurrency
 - more reusable. Independent of the object
 - easier to refactor
+- optimizations like memoization and concurrency
 - do an independent calculation? 
 
 
@@ -116,11 +116,13 @@ Concepts: Higher Order Functions
 
 Higher Order Functions take a function as a parameter, or return a function. They let us reuse code in places we wouldn't expect, like loops.
 
+### Example: I'm old so I know stuff
+
 ```
-var oldestUser;
-for (var i = 0; i < users.length; i++) {
-    if (!oldestUser || users[i].age > oldestUser.age) {
-        oldestUser = users[i]
+var bestProgrammer;
+for (var i = 0; i < programmers.length; i++) {
+    if (!bestProgrammer || programmers[i].age > bestProgrammer.age) {
+        bestProgrammer = programmers[i]
     }
 }
 ```
@@ -139,11 +141,11 @@ function maximum(items, toValue) {
 }
 ```
 
-The above belongs in an NPM module, and is no longer a part of our code base.
+The above belongs in an NPM module, and is no longer a part of our code base. POOF!
 
 ```
-var oldestUser = maximum(users, function(user) {
-    return user.age
+var bestProgrammer = maximum(programmers, function(person) {
+    return person.age
 })
 ```
 
