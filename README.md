@@ -70,9 +70,9 @@ Concepts: Pure Functions
 
 "Pure" functions return a result based only on what you pass in.
 
-### Example: The Fall of Rome
+### Example: Newtonian Physics 101
 ```
-class Rome {
+class Apple {
     constructor(gravity) {
         this.x = 0
         this.y = 0
@@ -94,7 +94,7 @@ function fall(gravity, y, dt) {
     return y + gravity*dt
 }
 
-ball.y = fall(ball.gravity, ball.y, dt)
+apple.y = fall(apple.gravity, apple.y, dt)
 ```
 
 ### What's the point of pure?
@@ -201,7 +201,7 @@ Our composed application code is very unlikely to be buggy. Any bugs are probabl
 Principles
 
 - focused
-- most basic parameter possible (`y` instead of `ball`)
+- most basic parameter possible (work with `age` instead of `user`)
 
 Composition-Driven Development
 ------------------------------
