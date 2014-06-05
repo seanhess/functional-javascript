@@ -144,12 +144,12 @@ function maximum(items, toValue) {
 The above belongs in an NPM module, and is no longer a part of our code base. POOF!
 
 ```
-var bestProgrammer = maximum(programmers, function(person) {
+bestProgrammer = maximum(programmers, function(person) {
     return person.age
 })
 
 // ES6 version
-maximum(programmers, (person) => person.age) 
+bestProgrammer = maximum(programmers, (person) => person.age) 
 ```
 
 This is much easier to read. Maximum is most likely maintained by someone else in the community and becomes well-tested. We can forget about how it works. 
