@@ -176,7 +176,7 @@ First we need some new tools.
 [`Array.map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) converts each item in an array to something else:
 
 ```
-[1,2,3].map(function(n) { 
+[1,2,3].map((n) => n*2)
     return n*2 
 })
 // -> [2,4,6]
