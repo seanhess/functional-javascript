@@ -74,9 +74,8 @@ Concepts: Pure Functions
 ```
 class Apple {
     constructor(gravity) {
-        this.x = 0
         this.y = 0
-        this.gravity = -9.8 // m/s2
+        this.gravity = -9.8
         this.velocity = 0
     }
 
