@@ -28,7 +28,7 @@ What is Functional Programming?
 - series of instructions to the computer to access & modify memory. 
 - Focus on HOW it works
 
-```
+```js
 var totalAge = 0
 for (var i = 0; i < users.length; i++) {
     totalAge += users[i].age
@@ -39,7 +39,7 @@ for (var i = 0; i < users.length; i++) {
 - Functions as high-level tools you combine to do something. 
 - Focuses on WHAT it does
 
-```
+```javascript
 var totalAge = users.map(age).reduce(sum)
 ```
 
