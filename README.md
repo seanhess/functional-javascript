@@ -28,16 +28,20 @@ What is Functional Programming?
 - series of instructions to the computer to access & modify memory. 
 - Focus on HOW it works
 
-    var totalAge = 0
-    for (var i = 0; i < users.length; i++) {
-        totalAge += users[i].age
-    }
+```
+var totalAge = 0
+for (var i = 0; i < users.length; i++) {
+    totalAge += users[i].age
+}
+```
 
 ### Functional Programming
 - Functions as high-level tools you combine to do something. 
 - Focuses on WHAT it does
 
-    var totalAge = users.map(age).reduce(sum)
+```
+var totalAge = users.map(age).reduce(sum)
+```
 
 Why functional programming?
 ---------------------------
@@ -66,6 +70,17 @@ Why functional programming?
     - code size
     - refactoring
     - desigining code via 
+
+
+The END
+==========
+
+[github.com/seanhess/functional-javascript][talk]
+
+Concat Me: [@seanhess][@seanhess]
+
+
+
 
 
 
@@ -118,4 +133,5 @@ MAJOR CONCEPTS
 
 
 
-
+[talk]: http://github.com/seanhess/functional-javascript
+[@seanhess]: http://twitter.com/seanhess
