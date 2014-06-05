@@ -80,7 +80,7 @@ class Apple {
     }
 
     // fall depends on this.gravity, and this.y, which can change. 
-    // this is the right equation, right?
+    // this is the right equation, I think...
     fall(dt) {
         this.y += this.gravity * dt
     }
