@@ -208,8 +208,9 @@ Our composed application code is very unlikely to be buggy. Any bugs are probabl
 
 Principles
 
-- focused
-- most basic parameter possible (work with `age` instead of `user`)
+- do one thing, do it well
+- most basic parameter possible
+- someone already wrote it
 
 Composition-Driven Development
 ------------------------------
@@ -217,9 +218,10 @@ Composition-Driven Development
 Start writing the application code as if the functions exist. Start with *What*. Go back and write the new tools you need later.
 
 ```
-// hmm, this seems hard, but if I break it down...
-
 function solveWorldHunger(population) {
+
+    // hmm, this seems hard, but if I break it down...
+
     var food = getSoylent(population * MUCHO)
     var shipping = efficientDistribution(food)
     var economy = fixWorldEconomy(Time.MaybeTomorrow)
