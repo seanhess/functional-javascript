@@ -70,17 +70,19 @@ Concepts: Pure Functions
 
 "Pure" functions return a result based only on what you pass in.
 
-### Example: Newtonian Physics 101
+### Example: Isaac Netwon
 ```
 class Apple {
     constructor(gravity) {
         this.x = 0
         this.y = 0
         this.gravity = -9.8 // m/s2
+        this.velocity = 0
     }
 
     // fall depends on this.gravity, and this.y, which will 
     // be different each call. It also modifies this.y
+    // this is the right equation, right?
     fall(dt) {
         this.y += this.gravity * dt
     }
@@ -90,11 +92,14 @@ class Apple {
 Separate out the pure calculation:
 
 ```
-function fall(gravity, y, dt) {
-    return y + gravity*dt
+// look at this nice function I found on NPM!
+// Wow my function was really buggy. 
+function doPhysics(a, v0, dt) {
+    return v0*dt + (a*dt^2)/2
 }
 
-apple.y = fall(apple.gravity, apple.y, dt)
+var distance = doPhysics(apple.gravity, apple.velocity, dt)
+apple.y += distance
 ```
 
 ### What's the point of pure?
