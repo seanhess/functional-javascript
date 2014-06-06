@@ -120,6 +120,7 @@ apple.y += distance
 - optimizations like memoization and concurrency
 - do an independent calculation? 
 
+Find the pure calculations and keep them separate
 
 Concepts: Higher Order Functions
 --------------------------------
@@ -250,6 +251,9 @@ Beware of excessive partial application. Just use lambdas.
 ```
 [1,2,3].map((n) => sum(n, 2))  // more clear
 [1,2,3].map(sum.bind(null, 2)) // not worth it
+
+var sumc = _.curry(sum)
+[1,2,3].map(sumc(2))     // still not as clear
 ```
 
 The `compose` function is not really worth the confusion. Just use lambdas.
@@ -263,7 +267,7 @@ function excitedly(message) {
     return message+"!"
 }
 
-var welcome = _.compose(greet, excitedly)      // what is welcome?
+var welcome = _.compose(greet, excitedly)      // what type is welcome?
 var welcome = (name) => excitedly(greet(name)) // easier to understand
 welcome("UtahJS")
 ```
