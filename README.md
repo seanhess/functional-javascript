@@ -24,7 +24,7 @@ What is Functional Programming?
 > In computer science, functional programming is a programming paradigm, a style of building the structure and elements of computer programs, that treats computation as the evaluation of mathematical functions and avoids state and mutable data.
 — Wikipedia
 
-Umm. What?
+Wait, What?
 
 The alternative: Imperitive Programming
 ------------------------------------
@@ -38,7 +38,7 @@ for (var i = 0; i < users.length; i++) {
 }
 ```
 
-> Less words. Easy say! Ugg eat now!
+> Few words make talk easy
 
 Functional Programming
 ----------------------
@@ -49,7 +49,9 @@ Functions as high-level tools you combine to do something. Math!
 var totalAge = users.map(userAge).reduce(sum)
 ```
 
-> Reduce? What is this new devilry? — Boromir 
+> Reduce? What is this new devilry? — Boromir
+
+[A brief history](http://en.wikipedia.org/wiki/Functional_programming#History)
 
 Why functional programming?
 ---------------------------
