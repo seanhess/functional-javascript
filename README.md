@@ -1,7 +1,7 @@
 Functional Javascript: The Good Parts
 =====================================
 
-Follow Along: [github.com/seanhess/angularjs-typescript](github.com/seanhess/angularjs-typescript)
+Follow Along: [https://github.com/seanhess/functional-javascript](https://github.com/seanhess/functional-javascript)
 
 > Functional programming encourages us to organize our code well and helps us create code that is easier to reason about. The less we reinvent the wheel and use a well-tested tool, the easier it is to maintain our application code. 
 
