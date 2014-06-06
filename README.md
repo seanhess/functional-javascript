@@ -160,12 +160,12 @@ bestProgrammer = maximum(programmers, function(person) {
 bestProgrammer = maximum(programmers, (person) => person.age) 
 ```
 
-This is much easier to read. Maximum is most likely maintained by someone else in the community and becomes well-tested. We can forget about how it works. 
+This is much easier to read. `Maximum` is most likely maintained by someone else in the community and becomes well-tested. We can forget about how it works. 
 
 See [lodash.com](lodash.com) for many common higher order functions.
 
-Composition
-------------
+Concepts: Composition
+---------------------
 
 > "I like tiny programs that do one thing well and one thing only. Which hypothetical reusable modules would make the task at hand trivial?" — substack
 
