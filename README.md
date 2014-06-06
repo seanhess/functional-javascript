@@ -1,6 +1,8 @@
 Functional Javascript: The Good Parts
 =====================================
 
+Follow Along: github.com/seanhess/angularjs-typescript
+
 > Functional programming encourages us to organize our code well and helps us create code that is easier to reason about. The less we reinvent the wheel and use a well-tested tool, the easier it is to maintain our application code. 
 
 > "Pure" functions return a result based only on what you pass in. You never have to worry it is going to do something unexpected. Higher order functions (functions that take other functions as parameters) let us reuse code in places we wouldn't expect, like loops. Composition allows you to create larger tools from smaller ones. 
@@ -38,8 +40,6 @@ for (var i = 0; i < users.length; i++) {
 }
 ```
 
-> Few words make talk easy
-
 Functional Programming
 ----------------------
 Functions as high-level tools you combine to do something. Math!
@@ -49,9 +49,7 @@ Functions as high-level tools you combine to do something. Math!
 var totalAge = users.map(userAge).reduce(sum)
 ```
 
-> Reduce? What is this new devilry? — Boromir
-
-[A brief history](http://en.wikipedia.org/wiki/Functional_programming#History)
+[History: a separate track:](http://en.wikipedia.org/wiki/Functional_programming#History)
 
 - 1930 Lambda Calculus
 - 1958 Lisp and friends, John McCarthy
@@ -69,7 +67,13 @@ More code is reusable. Toolbox to Workshop
 
 More expressive. Orders of magnitude smaller. 
 
-Bigger vocabulary. 
+Tradeoffs: Bigger Vocabulary
+----------------------------
+
+> Reduce? What is this new devilry? — Boromir
+
+Failing to convince people at I.TV
+
 
 Concepts: Pure Functions
 -------------------------
