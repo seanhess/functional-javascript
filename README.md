@@ -53,6 +53,12 @@ var totalAge = users.map(userAge).reduce(sum)
 
 [A brief history](http://en.wikipedia.org/wiki/Functional_programming#History)
 
+- 1930 Lambda Calculus
+- 1958 Lisp and friends, John McCarthy
+- 1977 FP and composition. John Backus
+- 1978 ML
+- 1987 Haskell
+
 Why functional programming?
 ---------------------------
 *What* instead of *How*
