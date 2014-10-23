@@ -28,7 +28,7 @@ What is Functional Programming?
 
 Wait, What?
 
-The alternative: Imperitive Programming
+The alternative: Imperative Programming
 ------------------------------------
 Series of instructions to the computer to access & modify memory. 
 
