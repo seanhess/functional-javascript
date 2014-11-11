@@ -1,6 +1,10 @@
 Functional Javascript: The Good Parts
 =====================================
 
+- [ ] outline: make sure we cover composition
+- [ ] history: include Clojure, other cool stuff?
+- [ ] + immutability
+
 Follow Along: [https://github.com/seanhess/functional-javascript](https://github.com/seanhess/functional-javascript)
 
 > Functional programming encourages us to organize our code well and helps us create code that is easier to reason about. The less we reinvent the wheel and use a well-tested tool, the easier it is to maintain our application code. 
@@ -13,12 +17,11 @@ About Me
 --------
 Sean Hess
 
-Programmer, Inventor, Startup Advisor. Solve hard problems, make productive workplaces. 
+Programmer, Inventor, Startup Advisor. Solve hard problems, make productive workplaces. Kuali.co
 
 - Twitter: [@seanhess][@seanhess]
 - Blog: [seanhess.github.io](http://seanhess.github.io)
 - Github: [github.com/seanhess](http://github.com/seanhess/)
-
 
 What is Functional Programming?
 -------------------------------
@@ -56,6 +59,10 @@ var totalAge = users.map(userAge).reduce(sum)
 - 1977 FP and composition. John Backus
 - 1978 ML
 - 1987 Haskell
+- 2005 F#
+- 2007 Clojure
+- 20NN Popularity [1](http://www.infoworld.com/article/2610183/microsoft-net/article.html)
+
 
 Why functional programming?
 ---------------------------
@@ -70,19 +77,21 @@ More expressive. Orders of magnitude smaller.
 Tradeoffs: Bigger Vocabulary
 ----------------------------
 
-> Reduce? What is this new devilry? — Boromir
+![Boromir](http://i.imgur.com/kbU3SOe.png)
 
 Failing to convince people at I.TV
-
 
 Concepts: Pure Functions
 -------------------------
 
 > Elevate the pure functions from the impure, lest they drag your whole codebase into the mire. — Saint Curry (not the spice)
 
-"Pure" functions return a result based only on what you pass in.
+[Pure functions](http://en.wikipedia.org/wiki/Pure_function) return the same result given the same arguments. Calling them does not cause side effects like mutation or IO.
 
 ### Example: Isaac Netwon
+
+<img src="http://jp4.r0tt.com/l_a86fdef0-8582-11e1-94c2-357a50100004.jpg">
+
 ```
 class Apple {
     constructor(gravity) {
@@ -103,24 +112,34 @@ Separate out the pure calculation:
 
 ```
 // look at this nice function I found on NPM!
-// Wow my function was really buggy. 
+// I guess my function was totally wrong
 function doPhysics(a, v0, dt) {
     return v0*dt + (a*dt^2)/2
 }
 
 var distance = doPhysics(apple.gravity, apple.velocity, dt)
+
 apple.y += distance
+
 ```
 
-### What's the point of pure?
+### Pure: Referential Transparency
 
-- much easier to test
-- more reusable. Independent of the object
-- easier to refactor
-- optimizations like memoization and concurrency
-- do an independent calculation? 
+The output is ONLY a function of the inputs. Swap it out.
 
-Find the pure calculations and keep them separate
+- Optimizations - concurrency, memoization
+- Easier to test and refactor
+- Encourages reuse - independent of any classes (`Apple` vs `fall` vs `doPhysics`)
+
+### Pure: No Side Effects
+
+It doesn't mess anything else up. It won't change your arguments, global state, or the file system.
+
+- Safe and Predictable - less brain space
+
+### Separate the Pure from the rest
+
+You still need IO and have state. Find the pure calculations and keep them separate
 
 Concepts: Higher Order Functions
 --------------------------------
@@ -177,7 +196,7 @@ Concepts: Composition
 Build very focused tools, then use them to do something bigger. Here's our `totalAge` code from before. 
 
 ```
-// I understand how every line translates into machine code!
+// Yay, I understand how every line of this works!
 var totalAge = 0
 for (var i = 0; i < users.length; i++) {
     totalAge += users[i].age
