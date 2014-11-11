@@ -1,10 +1,6 @@
 Functional Javascript: The Good Parts
 =====================================
 
-- [ ] outline: make sure we cover composition
-- [ ] history: include Clojure, other cool stuff?
-- [ ] + immutability
-
 Follow Along: [https://github.com/seanhess/functional-javascript](https://github.com/seanhess/functional-javascript)
 
 > Functional programming encourages us to organize our code well and helps us create code that is easier to reason about. The less we reinvent the wheel and use a well-tested tool, the easier it is to maintain our application code. 
@@ -17,7 +13,7 @@ About Me
 --------
 Sean Hess
 
-Programmer, Inventor, Startup Advisor. Solve hard problems, make productive workplaces. Kuali.co
+Programmer, Inventor, Startup Advisor. Solve hard problems, build productive teams. Kuali.co
 
 - Twitter: [@seanhess][@seanhess]
 - Blog: [seanhess.github.io](http://seanhess.github.io)
@@ -102,6 +98,7 @@ class Apple {
 
     // fall depends on this.gravity, and this.y, which can change. 
     // this is the right equation, I think...
+    // what happens if I call this twice?
     fall(dt) {
         this.y += this.gravity * dt
     }
@@ -144,11 +141,11 @@ You still need IO and have state. Find the pure calculations and keep them separ
 Concepts: Higher Order Functions
 --------------------------------
 
-> "There's a function for that" — Haskell the Supreme Logician, in reference to pretty much your entire codebase
+<img src="http://imgur.com/RAhr8O4.png">
 
 Higher Order Functions take a function as a parameter, or return a function. They let us reuse code in places we wouldn't expect, like loops.
 
-### Example: I'm old so I know stuff
+### Example: Older is better
 
 ```
 var bestProgrammer;
