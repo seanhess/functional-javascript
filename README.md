@@ -48,7 +48,7 @@ Functions as high-level tools you combine to do something. Math!
 var totalAge = users.map(userAge).reduce(sum)
 ```
 
-[History: a separate track:](http://en.wikipedia.org/wiki/Functional_programming#History)
+[History - a separate track:](http://en.wikipedia.org/wiki/Functional_programming#History)
 
 - 1930 Lambda Calculus
 - 1958 Lisp and friends, John McCarthy
@@ -301,7 +301,7 @@ function excitedly(message) {
 
 var welcome = _.compose(excitedly, greet)      // what type is welcome?
 var welcome = (name) => excitedly(greet(name)) // easier to understand
-welcome("UtahJS")
+welcome("Kuali")
 ```
 
 Crazy recursive loops
