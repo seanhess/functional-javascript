@@ -32,7 +32,7 @@ The alternative: Imperative Programming
 Series of instructions to the computer to access & modify memory. 
 
 ```
-// I understand (sort of) how every line translates into machine code!
+// I understand how every line of this works!
 var totalAge = 0
 for (var i = 0; i < users.length; i++) {
     totalAge += users[i].age
@@ -44,7 +44,7 @@ Functional Programming
 Functions as high-level tools you combine to do something. Math!
 
 ```
-// oh, so we're summing the array of ages, got it.
+// don't know how this works, but it's clear what it does
 var totalAge = users.map(userAge).reduce(sum)
 ```
 
@@ -55,9 +55,8 @@ var totalAge = users.map(userAge).reduce(sum)
 - 1977 FP and composition. John Backus
 - 1978 ML
 - 1987 Haskell
-- 2005 F#
-- 2007 Clojure
-- 20NN Popularity [1](http://www.infoworld.com/article/2610183/microsoft-net/article.html)
+- 2000+ Scala, F#, Clojure
+- 2010+ Popularity? [[1]](http://www.infoworld.com/article/2610183/microsoft-net/article.html)
 
 
 Why functional programming?
@@ -77,6 +76,12 @@ Tradeoffs: Bigger Vocabulary
 
 Failing to convince people at I.TV
 
+
+Tradeoffs: New Concepts
+-----------------------
+
+> Learning languages is so easy. I speak both English and Pig latin! - Programmers
+
 Concepts: Pure Functions
 -------------------------
 
@@ -86,7 +91,7 @@ Concepts: Pure Functions
 
 ### Example: Isaac Netwon
 
-<img src="http://jp4.r0tt.com/l_a86fdef0-8582-11e1-94c2-357a50100004.jpg">
+<img height="300" src="http://jp4.r0tt.com/l_a86fdef0-8582-11e1-94c2-357a50100004.jpg">
 
 ```
 class Apple {
@@ -230,6 +235,7 @@ function getAge(object) { return object.age }
 That's 4 new tools in our toolbox: `map`, `reduce`, `sum`, and `getAge`. With all 4 of these, our original code becomes trivial.
 
 ```
+// don't know HOW this works, but it's clear WHAT it does
 var totalAge = users.map(getAge).reduce(sum)
 ```
 
@@ -316,7 +322,7 @@ If we focus on composable code we can all build off each other's work.
 
 *What* instead of *How*. Smaller code bases. Refactoring. Maintenance
 
-The END
+It's Over!
 ==========
 
 [github.com/seanhess/functional-javascript][talk]
