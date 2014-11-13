@@ -55,7 +55,7 @@ var totalAge = users.map(userAge).reduce(sum)
 - 1977 FP and composition. John Backus
 - 1978 ML
 - 1987 Haskell
-- 2000+ Scala, F#, Clojure
+- 2004+ Scala, F#, Clojure
 - 2010+ Popularity? [[1]](http://www.infoworld.com/article/2610183/microsoft-net/article.html)
 
 
