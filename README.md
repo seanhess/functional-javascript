@@ -141,7 +141,7 @@ You still need IO and have state. Find the pure calculations and keep them separ
 Concepts: Higher Order Functions
 --------------------------------
 
-<img src="http://imgur.com/RAhr8O4.png">
+<img width="400" src="http://imgur.com/0OlEYNd.png">
 
 Higher Order Functions take a function as a parameter, or return a function. They let us reuse code in places we wouldn't expect, like loops.
 
@@ -241,6 +241,10 @@ Principles
 - most basic parameter possible
 - someone already wrote it
 
+## Instead of Inheritance
+
+Example: Front-end components
+
 Composition-Driven Development
 ------------------------------
 
@@ -258,18 +262,24 @@ function solveWorldHunger(population) {
 }
 ```
 
+### Application Agnostic
+
+What is reusable about your code but not specific to your application? Write it and be famous. Oh wait, someone already did.
+
+### Recompose to override things
+
 3rd party libraries: make your most important calculations available as focused functions! You can't anticipate everything!
 
-A map through the wastes
--------------------------
-Beware of excessive partial application. Just use lambdas.
+A map through the functional JS wastes
+--------------------------------------
+Consider using lambdas for clarity.
 
 ```
 [1,2,3].map((n) => sum(n, 2))  // more clear
-[1,2,3].map(sum.bind(null, 2)) // not worth it
+[1,2,3].map(sum.bind(null, 2)) // way too noisy
 
 var sumc = _.curry(sum)
-[1,2,3].map(sumc(2))     // still not as clear
+[1,2,3].map(sumc(2))           // confusing if people don't know about curry
 ```
 
 The `compose` function is not really worth the confusion. Just use lambdas.
@@ -283,7 +293,7 @@ function excitedly(message) {
     return message+"!"
 }
 
-var welcome = _.compose(greet, excitedly)      // what type is welcome?
+var welcome = _.compose(excitedly, greet)      // what type is welcome?
 var welcome = (name) => excitedly(greet(name)) // easier to understand
 welcome("UtahJS")
 ```
@@ -297,7 +307,7 @@ function eatAndDisgest(array) {
 }
 ```
 
-Use a type system! 
+Use a type system! Compose
 
 We all Win
 ----------
