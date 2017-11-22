@@ -292,7 +292,7 @@ The `compose` function is not really worth the confusion. Just use lambdas.
 
 ```
 function greet(name) {
-    return "Hello ", + name
+    return "Hello, " + name
 }
 
 function excitedly(message) {
